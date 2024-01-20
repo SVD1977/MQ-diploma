@@ -54,7 +54,7 @@
 
 .container {
     margin: 0 auto;
-    width: 75rem;
+    max-width: 75rem;
     padding: 28px 15px 146px;
 }
 
@@ -66,18 +66,27 @@
 
 .logo__img {
     width: 11.25rem;
+    @media (max-width: 800px) {
+        width: 5.25rem;
+    }
 }
 
 .menu {
     font-size: 0.8125rem;
     font-weight: 400;
+    @media (max-width: 800px) {
+        font-size: 0.6rem;
+    }
+    @media (max-width: 400px) {
+        font-size: 0.5rem;
+    }
 }
 
 .menu__list {
     display: flex;
     justify-content: space-between;
-    width: 30rem;
     text-transform: uppercase;
+    gap: 15px;
 }
 
 .nav__menu__link {
@@ -95,6 +104,9 @@
     text-align: center;
     color: #ffffff;
     text-transform: uppercase;
+    @media (max-width: 800px) {
+        width: fit-content;
+    }
 }
 
 .title {
